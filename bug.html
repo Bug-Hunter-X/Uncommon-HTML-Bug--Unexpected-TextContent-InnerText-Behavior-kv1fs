@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // This script attempts to modify the content of the div element,
+    // but it uses a non-standard way to access the content which could fail
+    // in certain browsers or situations.
+    document.getElementById("myDiv").textContent = "This text should replace the previous one.";
+    //The bug is that the textContent property of the div element might not be always properly updated, and the text may not always be replaced
+    document.getElementById("myDiv").innerText = "This text should replace the previous one.";
+    //Another way to write the same thing, but it might produce unexpected results in the same way as the previous one. 
+  </script>
+</body>
+</html>
