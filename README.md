@@ -1,0 +1,1 @@
+This repository demonstrates an uncommon bug related to the textContent and innerText properties in HTML.  The bug showcases scenarios where directly manipulating these properties might not consistently update the displayed text within a div element.  A solution is provided to address the issue and ensure reliable text updates.
