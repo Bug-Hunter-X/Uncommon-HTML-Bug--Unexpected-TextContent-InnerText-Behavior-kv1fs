@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    //The bug is solved using a more standard method: create a new Text Node and append it to the element 
+    const newText = document.createTextNode("This text should replace the previous one.");
+    const divElement = document.getElementById("myDiv");
+    divElement.innerHTML = ''; // Clear existing content
+    divElement.appendChild(newText);
+  </script>
+</body>
+</html>
